@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import {
-  View,
+  Image,
+  KeyboardAvoidingView,
+  ScrollView,
+  Switch,
   Text,
   TextInput,
   TouchableOpacity,
-  Image,
-  KeyboardAvoidingView,
-  Platform,
-  ScrollView,
-  Switch,
+  View
 } from 'react-native';
-import { loginStyles } from "../styles/login.styles"
+import { loginStyles } from "../styles/login.styles";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
@@ -30,7 +29,7 @@ export default function LoginScreen() {
     >
       <ScrollView contentContainerStyle={loginStyles.scrollContainer}>
         <View>
-            <Image source={require('../../assets/icone-prontuapp.png')} style={loginStyles.icone} />
+          <Image source={require('../../assets/icone-prontuapp.png')} style={loginStyles.icone} />
         </View>
 
         {/* Logo ou título principal */}
@@ -98,9 +97,17 @@ export default function LoginScreen() {
           </TouchableOpacity>
 
           {/* Mensagem final */}
-          <Text style={loginStyles.footerText}>
-            Não tem uma conta? Crie uma clicando aqui.
-          </Text>
+          <View style={loginStyles.footerContainer}>
+            <Text style={loginStyles.footerText}>
+              Não tem uma conta?
+            </Text>
+
+            <TouchableOpacity onPress={() => console.log('Ir para cadastro')}>
+              <Text style={loginStyles.createAccountText}>
+                Criar conta
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
     </KeyboardAvoidingView>

@@ -106,4 +106,17 @@ export const loginStyles = StyleSheet.create({
     fontSize: 14,
     marginTop: 16,
   },
+  footerContainer: {
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'baseline',
+  marginTop: 16,
+},
+createAccountText: {
+  color: '#053388',
+  fontWeight: 'bold',
+  marginLeft: 5,
+  fontSize: 14,
+  lineHeight: 20,
+},
 });
