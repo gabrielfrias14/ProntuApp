@@ -82,24 +82,7 @@ export const loginStyles = StyleSheet.create({
     color: '#053388',
     fontWeight: '500',
   },
-  loginButton: {
-    backgroundColor: '#053388',
-    borderRadius: 12,
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 24,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-  },
-  loginButtonText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: '600',
-  },
+
   footerText: {
     textAlign: 'center',
     color: '#999',
